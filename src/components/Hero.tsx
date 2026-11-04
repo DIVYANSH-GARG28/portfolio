@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, Mail, Phone, Code2, ArrowDown, Sparkles } from "lucide-react";
 import confetti from "canvas-confetti";
+import mascotSvg from "../assets/mascot.svg";
+import resumePdf from "../assets/resume.pdf";
 
 export const Hero = () => {
   const [mascotClicks, setMascotClicks] = useState(0);
@@ -109,7 +111,7 @@ export const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.96 }}
-                href="/resume.pdf"
+                href={resumePdf}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="comic-btn bg-[#22AC5F] text-white text-base sm:text-lg px-7 py-3.5"
@@ -214,7 +216,7 @@ export const Hero = () => {
                   <motion.img
                     whileHover={{ scale: 1.12, rotate: 6 }}
                     whileTap={{ scale: 0.88, rotate: -15 }}
-                    src="/mascot.svg"
+                    src={mascotSvg}
                     alt="Cheer Mascot"
                     className="w-32 h-32 object-contain drop-shadow-[2px_2px_0_#0C0E0F] mb-1"
                   />

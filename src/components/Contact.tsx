@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Mail, Linkedin, Github, Phone, Code2, ArrowUpRight } from "lucide-react";
 import { TapeBanner } from "./TapeBanner";
+import resumePdf from "../assets/resume.pdf";
 
 export const Contact = () => {
   const ref = useRef(null);
@@ -94,7 +95,7 @@ export const Contact = () => {
             <motion.a
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              href="/resume.pdf"
+              href={resumePdf}
               target="_blank"
               rel="noopener noreferrer"
               className="comic-btn comic-btn-white text-lg py-4 px-8 flex items-center gap-3 shadow-comic-md"

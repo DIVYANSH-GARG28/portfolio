@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Sparkles, CheckCircle2, Download, Mail, Phone, Coffee, Award, Zap, Heart, Flame } from "lucide-react";
 import confetti from "canvas-confetti";
+import resumePdf from "../assets/resume.pdf";
 
 // Confetti blast helper
 const fireMegaConfetti = () => {
@@ -261,7 +262,7 @@ export const EasterEggModal = () => {
                   {/* Fast Action Buttons */}
                   <div className="flex flex-wrap gap-3 pt-2">
                     <a
-                      href="/resume.pdf"
+                      href={resumePdf}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="comic-btn bg-[#22AC5F] text-white text-sm px-5 py-3 flex items-center gap-2"
