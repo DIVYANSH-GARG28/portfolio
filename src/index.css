@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --yellow: #FCC230;
+    --purple: #AD69FF;
+    --blue: #4080FB;
+    --pink: #F57EB4;
+    --green: #22AC5F;
+    --red: #EF4225;
+    --cream: #F2E3D0;
+    --ink: #0C0E0F;
+    --white: #FFFFFF;
+    --tape: #FFE23A;
+    --gold: #FBD900;
+    --paper: #FFF8EE;
+    --hero-page: #FBC93E;
+    
+    --line: 3px;
+    --radius: 20px;
+    --shadow: 6px 6px 0 #0C0E0F;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Comic Display Headlines (Make-A-Ton Signature Bangers with 3D text-stroke & shadow) */
+.comic-display {
+  font-family: 'Bangers', Impact, 'Arial Narrow', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 0.95;
+  color: #FFFFFF;
+  -webkit-text-stroke: 0.075em #0C0E0F;
+  paint-order: stroke fill;
+  text-shadow: 0.06em 0.08em 0 #0C0E0F;
+}
+
+.comic-display-yellow {
+  color: #FFE23A;
+  -webkit-text-stroke: 0.075em #0C0E0F;
+  paint-order: stroke fill;
+  text-shadow: 0.06em 0.08em 0 #0C0E0F;
+}
+
+.comic-display-red {
+  color: #EF4225;
+  -webkit-text-stroke: 0.075em #0C0E0F;
+  paint-order: stroke fill;
+  text-shadow: 0.06em 0.08em 0 #0C0E0F;
+}
+
+.comic-display-blue {
+  color: #4080FB;
+  -webkit-text-stroke: 0.075em #0C0E0F;
+  paint-order: stroke fill;
+  text-shadow: 0.06em 0.08em 0 #0C0E0F;
+}
+
+.comic-display-purple {
+  color: #AD69FF;
+  -webkit-text-stroke: 0.075em #0C0E0F;
+  paint-order: stroke fill;
+  text-shadow: 0.06em 0.08em 0 #0C0E0F;
+}
+
+.comic-title {
+  font-family: 'Titan One', 'Arial Black', system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #0C0E0F;
+}
+
+/* Comic Buttons */
+.comic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  font-family: 'Titan One', 'Arial Black', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #0C0E0F;
+  background-color: #FFE23A;
+  border: 3px solid #0C0E0F;
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 #0C0E0F;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.comic-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #0C0E0F;
+}
+
+.comic-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #0C0E0F;
+}
+
+.comic-btn-white {
+  background-color: #FFFFFF;
+}
+
+.comic-btn-pink {
+  background-color: #F57EB4;
+}
+
+.comic-btn-green {
+  background-color: #22AC5F;
+  color: #FFFFFF;
+}
+
+.comic-btn-blue {
+  background-color: #4080FB;
+  color: #FFFFFF;
+}
+
+/* Comic Cards */
+.comic-card {
+  background-color: #FFF8EE;
+  border: 3px solid #0C0E0F;
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 #0C0E0F;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comic-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 #0C0E0F;
+}
+
+/* Comic Tag / Pill */
+.comic-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid #0C0E0F;
+  border-radius: 999px;
+  box-shadow: 2px 2px 0 #0C0E0F;
+}
+
+/* Background Pattern: Halftone dots */
+.pattern-dots {
+  background-image: radial-gradient(#0C0E0F 12%, transparent 12%);
+  background-size: 16px 16px;
+}
+
+.pattern-dots-yellow {
+  background-color: #FBC93E;
+  background-image: radial-gradient(rgba(12, 14, 15, 0.12) 15%, transparent 15%);
+  background-size: 18px 18px;
+}
+
+.pattern-dots-light {
+  background-color: #FFF8EE;
+  background-image: radial-gradient(rgba(12, 14, 15, 0.08) 15%, transparent 15%);
+  background-size: 20px 20px;
+}
+
+.pattern-dots-dark {
+  background-color: #0C0E0F;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 15%);
+  background-size: 20px 20px;
+}
+
+/* Tilted Marquee Tape */
+.comic-tape-bar {
+  border-top: 3px solid #0C0E0F;
+  border-bottom: 3px solid #0C0E0F;
+  box-shadow: 0 5px 0 rgba(12, 14, 15, 0.85);
+  font-family: 'Titan One', sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+  overflow: hidden;
+}
+
+
